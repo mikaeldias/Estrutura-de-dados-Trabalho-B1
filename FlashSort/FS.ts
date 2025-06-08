@@ -72,20 +72,20 @@ function flashSort(arr: number[]): number[] {
     return arr;
 }
 
- // Cria lista em ordem aleatória
+ // Criar lista em ordem aleatória
 let v1: number[] = []; 
 
 for (let i = 0; i < 100000; i++) {
   v1.push(Math.floor(Math.random() * 10000));
 }
 
-// cria lista já ordenada
+// Criar lista ordenada
 let v2: number[] = [];
 for (let i = 0; i < 100000; i++) {
   v2.push(i);
 }
 
-// cria lista em ordem decrescente
+// Criar lista em ordem decrescente
 let v3: number[] = [];
 for (let i = 100000; i >= 0; i--) {
   v3.push(i);
@@ -93,7 +93,7 @@ for (let i = 100000; i >= 0; i--) {
 
 
 let inicio = performance.now();
-console.log(flashSort(v1));
+flashSort(v1);
 let fim = performance.now();
 console.log('--------------------------------------------------------------------------------------')
 console.log(`O tempo de duração do Flash Sort foi de (Array de Ordem Aletoria): ${fim - inicio}`);
@@ -101,7 +101,7 @@ console.log(`O tempo de duração do Flash Sort foi de (Array de Ordem Aletoria)
 console.log('--------------------------------------------------------------------------------------')
 
 let inicio_2 = performance.now();
-console.log(flashSort(v2));
+flashSort(v2);
 let fim_2 = performance.now();
 
 console.log('--------------------------------------------------------------------------------------')
@@ -109,7 +109,7 @@ console.log(`O tempo de duração do Flash Sort foi de (Array Ordenado): ${fim_2
 console.log('--------------------------------------------------------------------------------------')
 
 let inicio_3 = performance.now();
-console.log(flashSort(v3));
+flashSort(v3);
 let fim_3 = performance.now();
 
 console.log('--------------------------------------------------------------------------------------')
