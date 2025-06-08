@@ -1,4 +1,4 @@
-function flashSort(arr: number[]): number[] { 
+export function flashSort(arr: number[]): number[] { 
     let max = 0;
     let min = arr[0];
     const n: number = arr.length; 
@@ -73,45 +73,45 @@ function flashSort(arr: number[]): number[] {
 }
 
  // Criar lista em ordem aleatória
-let v1: number[] = []; 
+export let v1: number[] = []; 
 
-for (let i = 0; i < 100000; i++) {
+for (let i = 0; i < 10000; i++) {
   v1.push(Math.floor(Math.random() * 10000));
 }
 
 // Criar lista ordenada
-let v2: number[] = [];
-for (let i = 0; i < 100000; i++) {
+export let v2: number[] = [];
+for (let i = 0; i < 10000; i++) {
   v2.push(i);
 }
 
 // Criar lista em ordem decrescente
-let v3: number[] = [];
-for (let i = 100000; i >= 0; i--) {
+export let v3: number[] = [];
+for (let i = 10000; i >= 0; i--) {
   v3.push(i);
 }
 
 
-let inicio = performance.now();
-flashSort(v1);
-let fim = performance.now();
-console.log('--------------------------------------------------------------------------------------')
-console.log(`O tempo de duração do Flash Sort foi de (Array de Ordem Aletoria): ${fim - inicio}`);
+// let inicio = performance.now();
+// flashSort(v1);
+// let fim = performance.now();
+// console.log('--------------------------------------------------------------------------------------')
+// console.log(`O tempo de duração do Flash Sort foi de (Array de Ordem Aletoria): ${fim - inicio}`);
 
-console.log('--------------------------------------------------------------------------------------')
+// console.log('--------------------------------------------------------------------------------------')
 
-let inicio_2 = performance.now();
-flashSort(v2);
-let fim_2 = performance.now();
+// let inicio_2 = performance.now();
+// flashSort(v2);
+// let fim_2 = performance.now();
 
-console.log('--------------------------------------------------------------------------------------')
-console.log(`O tempo de duração do Flash Sort foi de (Array Ordenado): ${fim_2 - inicio_2}`);
-console.log('--------------------------------------------------------------------------------------')
+// console.log('--------------------------------------------------------------------------------------')
+// console.log(`O tempo de duração do Flash Sort foi de (Array Ordenado): ${fim_2 - inicio_2}`);
+// console.log('--------------------------------------------------------------------------------------')
 
-let inicio_3 = performance.now();
-flashSort(v3);
-let fim_3 = performance.now();
+// let inicio_3 = performance.now();
+// flashSort(v3);
+// let fim_3 = performance.now();
 
-console.log('--------------------------------------------------------------------------------------')
-console.log(`O tempo de duração do Flash Sort foi de (Array Inversamente Ordenado): ${fim_3 - inicio_3}`);
-console.log('--------------------------------------------------------------------------------------')
+// console.log('--------------------------------------------------------------------------------------')
+// console.log(`O tempo de duração do Flash Sort foi de (Array Inversamente Ordenado): ${fim_3 - inicio_3}`);
+// console.log('--------------------------------------------------------------------------------------')
